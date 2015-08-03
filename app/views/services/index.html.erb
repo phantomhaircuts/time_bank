@@ -1,0 +1,8 @@
+<h2>Services</h2>
+<ul>
+  <% @services.each do |service| %>
+    <li>
+      <%= link_to "#{service.name}", profile_service_path(service.profile, service) %>
+    </li>
+  <% end %>
+</ul>

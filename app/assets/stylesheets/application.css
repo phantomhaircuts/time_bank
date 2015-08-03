@@ -1,15 +1,56 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.site-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+text-align: center;
+height: 100px;
+border-bottom: 1px solid #EEEDF2;
+border-top: 1px solid gray;
+padding-bottom: 10px;
+padding-top: 10px;
+background-color: #01ADDB;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-top: 45px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.timebank {
+  font-size: 50px;
+  color: white;
+  border: solid 1px #01ADDB;
+  background-color: #01ADDB;
+}
+
+.profile{
+  width: 300px;
+}
+.circular {
+  display:block;
+  margin:auto;
+  width: 100%;
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url('https://upload.wikimedia.org/wikipedia/en/2/2e/Pat-Morita_(Karate_Kid).jpg') no-repeat;
+	}

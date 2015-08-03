@@ -6,9 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-
-<%= yield %>
-
+<div class="site-container">
+  <nav class="nav">
+    <a class="nav-link" href="/"> Home </a>
+    <a class="nav-link" href="/profiles/:id"> Profile </a>
+    <a class="nav-link" href="/services"> Services </a>
+    <a class="nav-link" href="/"> Search </a>
+  </nav>
+  <div class="content">
+    <%= yield %>
+  </div>
+</div>
 </body>
 </html>
