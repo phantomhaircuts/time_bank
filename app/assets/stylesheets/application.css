@@ -2,7 +2,10 @@
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "HelveticaNeue-Light", sans-serif;
+}
+body {
+  font-family: "HelveticaNeue-Light";
 }
 .site-container {
   width: 100%;

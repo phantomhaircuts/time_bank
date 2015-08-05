@@ -1,19 +1,21 @@
-<h1><%= @profile.name %></h1>
-<div class="circular">
-<!-- <img src="<%=@profile.pic_url%>"> -->
-</div>
-<span class="timebank">
-Time Bank:
-</span>
-<span class="timebank">
-<%= @profile.time_bank %>:00
-</span>
-<ul>
-Services<%= link_to "+", new_profile_service_path(@profile) %>:
+<h1><%= @profile.name %></h1><%= link_to "edit", edit_profile_path%>
+  <div class="circular">
+    <!-- <img src="<%=@profile.pic_url%>"> -->
+  </div>
+  <span class="timebank">
+    Time Bank:
+  </span>
+  <span class="timebank">
+    <%= @profile.time_bank %>:00
+  </span>
+  <p><%= @profile.about_me %></p>
   <ul>
-    <% @profile.services.each do |service| %>
-      <li>
-        <%= link_to "#{service.name}", profile_service_path(@profile, service)%>
-      </li>
-    <% end %>
+  <li>
+    Services<%= link_to "+", new_profile_service_path(@profile) %>:
+      <% @profile.services.each do |service| %>
+  </li>
+  <li>
+      <%= link_to "#{service.name}", profile_service_path(@profile, service)%>
+  </li>
   </ul>
+<% end %>
