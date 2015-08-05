@@ -2,6 +2,7 @@
   <div class="circular">
     <!-- <img src="<%=@profile.pic_url%>"> -->
   </div>
+  <%= current_user %>
   <span class="timebank">
     Time Bank:
   </span>
@@ -9,13 +10,11 @@
     <%= @profile.time_bank %>:00
   </span>
   <p><%= @profile.about_me %></p>
-  <ul>
   <li>
-    Services<%= link_to "+", new_profile_service_path(@profile) %>:
+    Services <%= link_to "+", new_profile_service_path(@profile) %>
       <% @profile.services.each do |service| %>
   </li>
   <li>
-      <%= link_to "#{service.name}", profile_service_path(@profile, service)%>
+    <%= link_to "#{service.name}", profile_service_path(@profile, service)%>
   </li>
-  </ul>
 <% end %>

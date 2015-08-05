@@ -11,11 +11,18 @@
 <div class="site-container">
   <nav class="nav">
     <a class="nav-link" href="/"> Home </a>
-    <a class="nav-link" href="/profiles/:id"> Profile </a>
+    <a class="nav-link" href="/profiles"> Profile </a>
     <a class="nav-link" href="/services"> Services </a>
+  <% if session[:user] %>
+  <a class="nav-link" href="/sign_out"> sign out</a></h2>
+  <span class="welcome">Welcome <%= session[:user]["username"] %>!</span>
+<% else %>
+  <a class="nav-link" href="/sign_up">Sign up</a>
+  <a class="nav-link" href="/sign_in">Sign in</a>
+<% end %>
   </nav>
   <div class="content">
-    <%= yield %>
+      <%= yield %>
   </div>
 </div>
 </body>

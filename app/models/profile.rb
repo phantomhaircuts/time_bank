@@ -1,4 +1,5 @@
 class Profile < ActiveRecord::Base
+  belongs_to :user
   has_many :services, dependent: :destroy
 
   def subtract_from_timebank(amount)

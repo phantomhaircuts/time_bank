@@ -1,17 +1,16 @@
 <%= form_for ([@profile, @service]) do |f| %>
-<%= f.label :name %>
+<!-- <%= f.label :name %> -->
 <%= f.text_field :name %>
 
-<%= f.label :price %>
+<!-- <%= f.label :price %> -->
 <%= f.text_field :price %>
 
-<%= f.label :description %>
+<!-- <%= f.label :description %> -->
 <%= f.text_area :description %>
 <%= f.submit %>
+<% end %>
 
-<div>
+
   <%= form_for [@profile, @service], method: :delete, :html => {:class => "delete-service"} do |f| %>
   <%= f.submit "Destroy" %>
   <% end %>
-    <% end %>
-</div>

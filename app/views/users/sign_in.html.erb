@@ -1,0 +1,8 @@
+<h2>Sign in</h2>
+<div class="form">
+<%= form_tag("/sign_in", method: "post") do %>
+  <input type="text" name="username" placeholder="username" value="<%= cookies[:username] %>"/>
+  <input type="password" name="password" placeholder="password" />
+  <input type="submit" value="Sign in" />
+</div>
+<% end %>
