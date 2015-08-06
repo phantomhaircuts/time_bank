@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'rails_12factor'
 gem 'cancancan'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
