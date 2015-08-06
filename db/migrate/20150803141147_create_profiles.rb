@@ -5,7 +5,6 @@ class CreateProfiles < ActiveRecord::Migration
     t.text :about_me
     t.text :pic_url
     t.integer :time_bank
-    # t.references :user, index: true, foreign_key: true
     end
   end
 end

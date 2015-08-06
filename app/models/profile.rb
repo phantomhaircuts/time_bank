@@ -1,6 +1,8 @@
 class Profile < ActiveRecord::Base
   belongs_to :user
   has_many :services, dependent: :destroy
+  has_many :purchased_transactions, class_name: "Transaction", foreign_key: :buyer_id
+  has_many :sold_transactions, class_name: "Transaction", foreign_key: :seller_id
 
   def subtract_from_timebank(amount)
     self.time_bank = self.time_bank - amount

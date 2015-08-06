@@ -11,14 +11,16 @@ class UsersController < ApplicationController
       password_digest: BCrypt::Password.create(params[:password])
     )
     if params[:password_confirmation] != params[:password]
-      message = "Passwords do not match"
+      # flash[:notice] = "Passwords do not match"
+      render :sign_up
     elsif user.save
-      message = "Your account has been created"
+      # flash[:notice] = "Your account has been created"
+      sign_in_user(user)
+      redirect_to new_profile_path
     else
-      message = "Your account could not be created. Username is taken?"
+      # flash[:notice] = "Your account could not be created. Username is taken?"
+      render :sign_up
     end
-    flash[:notice] = message
-    redirect_to action: :sign_in
   end
 
 
@@ -33,11 +35,7 @@ class UsersController < ApplicationController
       message = "Incorrect password"
     else
     message = "You have signed in, #{@user.username}! "
-    cookies[:username] = {
-      value: @user.username,
-      expires: 5.hours.from_now
-      }
-      session[:user] = @user
+    sign_in_user(@user)
     end
     flash[:notice] = message
     redirect_to root_url
@@ -47,6 +45,12 @@ class UsersController < ApplicationController
   def sign_out
   reset_session
   redirect_to root_url
+  end
+
+  private
+  def sign_in_user(user)
+    cookies[:username] = { value: user.username, expires: 5.hours.from_now }
+    session[:user_id] = user.id
   end
 
 end

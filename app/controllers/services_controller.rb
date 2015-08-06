@@ -8,8 +8,6 @@ class ServicesController < ApplicationController
   def show
     @service = Service.find(params[:id])
     @amount = @service.profile.time_bank
-
-
   end
 
   #create new services
