@@ -10,7 +10,7 @@
   </span>
   <p><%= @profile.about_me %></p>
   <li>
-    Services <%= link_to "+", new_profile_service_path(@profile) %>
+    Services <%= link_to " + ", new_profile_service_path(@profile) %>
       <% @profile.services.each do |service| %>
   </li>
   <li>

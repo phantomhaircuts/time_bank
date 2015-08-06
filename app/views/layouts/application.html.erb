@@ -13,14 +13,14 @@
 <div class="site-container">
   <nav class="nav">
     <%= image_tag "timefly.png", :class => "logo"%>
-    <a class="nav-link" href="/"> Home </a>
-    <a class="nav-link" href="/profiles"> Profiles </a>
-    <a class="nav-link" href="/services"> Services </a>
+    <a class="nav-link" href="/"> home </a>
+    <a class="nav-link" href="/profiles"> profiles </a>
+    <a class="nav-link" href="/services"> services </a>
   <% if session[:user_id] %>
   <a class="nav-link" href="/sign_out"> sign out</a></h2>
 <% else %>
-  <a class="nav-link" href="/sign_up">Sign up</a>
-  <a class="nav-link" href="/sign_in">Sign in</a>
+  <a class="nav-link" href="/sign_up">sign up</a>
+  <a class="nav-link" href="/sign_in">sign in</a>
 <% end %>
   </nav>
     <div class="content">
