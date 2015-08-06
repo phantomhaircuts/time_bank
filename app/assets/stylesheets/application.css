@@ -11,14 +11,13 @@ body {
 }
 .site-container {
   width: 100%;
-  margin: 0;
   padding: 0;
 }
 
 nav {
 text-align: center;
 height: 150px;
-border-bottom: 1px solid #EEEDF2;
+border-bottom: 3.5px solid #EEEDF2;
 border-top: 1px solid gray;
 padding-bottom: 10px;
 padding-top: 10px;
@@ -39,6 +38,10 @@ background-color: white;
 }
 .welcome{
   color: white;
+}
+
+.intro {
+  width: 100%;
 }
 
 .nav-link:hover{
@@ -63,6 +66,7 @@ background-color: white;
   padding-left: 70px;
   padding-right: 70px;
 }
+
 h2 {
   font-size: 40px;
   padding-top: 10px;
@@ -179,4 +183,10 @@ li {
   position: fixed;
   display: flex;
   padding-left: 10px;
+}
+
+
+
+footer {
+  height: 100px;
 }

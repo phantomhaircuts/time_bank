@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'services#index'
+  root 'profiles#welcome'
   get '/services', to: 'services#index'
 
   resources :transactions, only: [:create]
@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   post '/sign_up', to: 'users#sign_up!'
   get '/sign_out', to: 'users#sign_out'
 
+  get "/welcome" => 'profiles#welcome'
 end
