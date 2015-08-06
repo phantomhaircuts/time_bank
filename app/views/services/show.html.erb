@@ -6,6 +6,7 @@
 <h2>
   Cost: <%= @service.price %>:00
 </h2>
+
 <%= form_for Transaction.new, :html => {:class => "transaction"} do |f| %>
   <%= f.hidden_field :service_id, value: @service.id %>
   <%= f.submit "Purchase" %>

@@ -31,6 +31,7 @@ background-color: #01ADDB;
   padding: 5%;
   font-size: 30px;
   display: inline-block;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 .welcome{
   color: white;
@@ -75,6 +76,11 @@ a {
   color: red;
 }
 
+.notice {
+  color: red;
+  font-size: 35px;
+  font-weight: lighter;
+}
 
 .timebank {
   font-size: 50px;
@@ -87,6 +93,7 @@ ackgrou, nd: -webkit-linear-gradient(#01ADDB, white);
 }
 
 .profile{
+  height: 400px;
   width: 300px;
 }
 .circular {
@@ -100,6 +107,12 @@ ackgrou, nd: -webkit-linear-gradient(#01ADDB, white);
 	-moz-border-radius: 150px;
 	background: url('https://upload.wikimedia.org/wikipedia/en/2/2e/Pat-Morita_(Karate_Kid).jpg') no-repeat;
 	}
+
+  .new_service {
+    margin: 0 auto;
+    width: 50%;
+  }
+
   form{
     display: block;
 
@@ -109,12 +122,16 @@ ackgrou, nd: -webkit-linear-gradient(#01ADDB, white);
     height: 25px;
     margin-bottom: 5px;
     display: block;
+    margin: 0 auto;
+    width: 50%;
   }
   textarea {
     margin: 0px;
     height: 400px;
     width: 500px;
     display: block;
+    margin: 0 auto;
+    width: 50%;
   }
   input[type=submit]{
     background-color: #01ADDB;
@@ -122,7 +139,9 @@ ackgrou, nd: -webkit-linear-gradient(#01ADDB, white);
     color: white;
     height: 35px;
     display: block;
-
-li{
+    margin: 0 auto;
+    width: 50%;
+}
+li {
   list-style-type:none
 }

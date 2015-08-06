@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Timebank</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,17 +13,17 @@
 <div class="site-container">
   <nav class="nav">
     <a class="nav-link" href="/"> Home </a>
-    <a class="nav-link" href="/profiles"> Profile </a>
+    <a class="nav-link" href="/profiles"> Profiles </a>
     <a class="nav-link" href="/services"> Services </a>
-  <% if session[:user] %>
+  <% if session[:user_id] %>
   <a class="nav-link" href="/sign_out"> sign out</a></h2>
-  <span class="welcome">Welcome <%= session[:user]["username"] %>!</span>
 <% else %>
   <a class="nav-link" href="/sign_up">Sign up</a>
   <a class="nav-link" href="/sign_in">Sign in</a>
 <% end %>
   </nav>
-  <div class="content">
+    <div class="content">
+    <div class="notice"><%= flash[:notice] %></div>
       <%= yield %>
   </div>
 </div>

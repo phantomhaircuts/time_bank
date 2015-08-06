@@ -11,14 +11,14 @@ class UsersController < ApplicationController
       password_digest: BCrypt::Password.create(params[:password])
     )
     if params[:password_confirmation] != params[:password]
-      # flash[:notice] = "Passwords do not match"
+      flash[:notice] = "Passwords do not match"
       render :sign_up
     elsif user.save
-      # flash[:notice] = "Your account has been created"
+      flash[:notice] = "Your account has been created"
       sign_in_user(user)
       redirect_to new_profile_path
     else
-      # flash[:notice] = "Your account could not be created. Username is taken?"
+      flash[:notice] = "Your account could not be created. Username is taken?"
       render :sign_up
     end
   end

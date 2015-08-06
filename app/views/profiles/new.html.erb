@@ -1,0 +1,19 @@
+<h1>new</h1>
+
+<%= form_for @profile do |f| %>
+<!-- <%= f.label :name %> -->
+<%= f.text_field :name, :placeholder => "name" %>
+
+<!-- <%= f.label :pic_url %> -->
+<%= f.text_field :pic_url, :placeholder => "photo url" %>
+
+<!-- <%= f.label :about_me %> -->
+<%= f.text_area :about_me, :placeholder => "about me" %>
+
+<%= f.hidden_field :user_id, value: @user.id %>
+
+<%= f.hidden_field :time_bank, value: 2 %>
+
+<%= f.submit %>
+
+<% end %>
