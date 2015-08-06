@@ -10,6 +10,6 @@ class TransactionsController < ApplicationController
     @buyer.subtract_from_timebank @price
     @seller.add_to_timebank @price
 
-    redirect_to profile_service_path(@seller, @service), notice: "Service has been purchased!"
+    redirect_to profile_service_path(@seller, @service), notice: "Service has been purchased! #{@price}:00 has been deducted from your account."
   end
 end
