@@ -42,6 +42,10 @@ background-color: white;
 
 .intro {
   width: 100%;
+  color: #ED423D;
+}
+.w {
+  color: #ED423D;
 }
 
 .nav-link:hover{
@@ -89,7 +93,7 @@ a {
 }
 
 .notice {
-  background-color: #ED423D;
+  background-color: #484d56;
   color: white;
   font-size: 35px;
   font-weight: lighter;
@@ -109,9 +113,11 @@ a {
 }
 
 .profile-name {
-  background-color: #ED423D;
+  background-color: #484d56;
   color: white;
   font-size: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .circular {

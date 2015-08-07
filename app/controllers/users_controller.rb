@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       sign_in_user(user)
       redirect_to new_profile_path
     else
-      flash[:notice] = "Your account could not be created. Username is taken?"
+      flash[:notice] = "Sorry, your account could not be created. This Username has already been taken"
       render :sign_up
     end
   end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     elsif !BCrypt::Password.new(@user.password_digest).is_password?(params[:password])
       message = "Incorrect password"
     else
-    message = "You have signed in, #{@user.username}! "
+    message = "Hello, #{@user.username}! "
     sign_in_user(@user)
     end
     flash[:notice] = message
