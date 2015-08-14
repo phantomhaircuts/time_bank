@@ -16,6 +16,9 @@
     <a class="nav-link" href="/"> home </a>
     <a class="nav-link" href="/profiles"> profiles </a>
     <a class="nav-link" href="/services"> services </a>
+  <!-- if you use the helper_method I showed in application_controller, you can
+      use current_user instead of session[:user_id], which I find more readable
+    -->
   <% if session[:user_id] %>
   <a class="nav-link" href="/sign_out"> sign out</a></h2>
 <% else %>
@@ -24,9 +27,10 @@
 <% end %>
   </nav>
     <div class="content">
+      <!-- Nice use of flash! -->
     <div class="notice"><%= flash[:notice] %></div>
       <%= yield %>
-  </div>
+      </div>
 </div>
 <footer>
 

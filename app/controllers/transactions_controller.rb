@@ -1,4 +1,5 @@
 class TransactionsController < ApplicationController
+  # nice job here!
   def create
     @buyer = current_user.profile
     @service = Service.find params[:transaction][:service_id]

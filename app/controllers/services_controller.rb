@@ -7,6 +7,7 @@ class ServicesController < ApplicationController
   #show
   def show
     @service = Service.find(params[:id])
+    # this variable isn't used in the view, should remove it!
     @amount = @service.profile.time_bank
   end
 
@@ -18,6 +19,11 @@ class ServicesController < ApplicationController
 
   def create
   @profile = Profile.find(params[:profile_id])
+  # really, if you want to limit people to create services for thier own profile
+  # you should use current_user.profile instead of what's in params (as params
+  # can be spoofed, current_user can't ):
+  @sevice = current_user.profile.services.create!(service_params)
+
   @sevice = Service.create!(service_params.merge(profile: @profile))
   redirect_to profile_services_path(@profile, @service)
   end
