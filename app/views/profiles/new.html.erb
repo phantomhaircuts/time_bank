@@ -10,8 +10,12 @@
 <!-- <%= f.label :about_me %> -->
 <%= f.text_area :about_me, :placeholder => "about me" %>
 
+<!-- as I mentioned in the controller, generally a bad idea to use hidden fields
+to store user_id type info, as it can easly be changed by the user -->
 <%= f.hidden_field :user_id, value: @user.id %>
 
+<!-- this number should be in the controller, i.e. you should set it in the controller
+so the user can't change it on the form and get more time! -->
 <%= f.hidden_field :time_bank, value: 2 %>
 
 <%= f.submit %>

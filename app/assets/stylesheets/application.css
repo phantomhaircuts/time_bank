@@ -1,3 +1,7 @@
+
+/* this file is getting a bit long, might be good to break it out into logical
+units in files (e.g. forms.css, main.css, profiles.css, etc ) */
+
 *, *:before, *:after {
   box-sizing: inherit;
   margin: 0;
@@ -52,6 +56,9 @@ background-color: white;
   /*text-shadow: 0 0 50px #ED423D;*/
   border-bottom: 5px solid #ED423D
 }
+
+/* generally it's a good idea to have your media queries at the bottom
+to ensure they aren't over-ridden later on */
 @media (min-width: 500px) {
     .site-content {
       width: 80%;
